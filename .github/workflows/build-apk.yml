@@ -1,0 +1,62 @@
+name: Build APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # Keeps the same debug signing key between builds,
+      # so a new APK installs over the old app without uninstalling.
+      - name: Restore debug keystore
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: emergency-light-debug-keystore-v1
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Build
+        run: gradle assembleDebug --no-daemon --stacktrace
+
+      - name: Check no internet permission
+        shell: bash
+        run: |
+          set -eo pipefail
+          APK="app/build/outputs/apk/debug/app-debug.apk"
+          SDK="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          BT_DIR="$(ls -d "$SDK"/build-tools/*/ | sort -V | tail -n 1)"
+          AAPT2="${BT_DIR}aapt2"
+          echo "Using: $AAPT2"
+          echo "----- Permissions in APK -----"
+          "$AAPT2" dump permissions "$APK" | tee permissions.txt
+          echo "------------------------------"
+          if grep -Eq "android\.permission\.(INTERNET|ACCESS_NETWORK_STATE)([^A-Z_]|$)" permissions.txt; then
+            echo "ERROR: APK must not request network permissions"
+            exit 1
+          fi
+          echo "OK: no network permissions found."
+
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk EmergencyLight-debug.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: EmergencyLight-apk
+          path: EmergencyLight-debug.apk
