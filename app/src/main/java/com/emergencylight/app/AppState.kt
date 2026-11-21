@@ -369,6 +369,9 @@ object AppState {
 
     // ---------------- screen light ----------------
 
+    // @JvmName: avoids a clash with the hidden setter of the `screenMode` property
+    // (both would be called setScreenMode inside the compiled app).
+    @JvmName("changeScreenMode")
     fun setScreenMode(mode: ScreenMode) {
         screenMode = mode
         lightModeLocked = false
