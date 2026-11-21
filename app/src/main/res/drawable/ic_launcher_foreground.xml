@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- White flashlight with 3 light beams, inside the adaptive-icon safe zone (21..87). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- beams -->
+    <path
+        android:pathData="M54,38 L54,25 M44,40 L37,29 M64,40 L71,29"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+    <!-- head -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,45 L68,45 L62,57 L46,57 Z" />
+    <!-- handle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,59 L61,59 L61,81 Q61,84 58,84 L50,84 Q47,84 47,81 Z" />
+    <!-- switch -->
+    <path
+        android:fillColor="#D50000"
+        android:pathData="M52,64 L56,64 L56,71 L52,71 Z" />
+</vector>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M24,2 A22,22 0 1,1 24,46 A22,22 0 1,1 24,2 Z" />
+    <!-- light beam (black) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M19,22 L29,22 L36,9 L12,9 Z" />
+    <!-- flashlight body (black) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M18,24 L30,24 L27,29 L21,29 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M21,30 L27,30 L27,40 L21,40 Z" />
+</vector>

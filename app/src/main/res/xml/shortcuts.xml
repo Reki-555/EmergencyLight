@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_sos"
+        android:shortcutId="sos"
+        android:shortcutLongLabel="@string/shortcut_sos_long"
+        android:shortcutShortLabel="@string/shortcut_sos_short">
+        <intent
+            android:action="com.emergencylight.app.SOS"
+            android:targetClass="com.emergencylight.app.MainActivity"
+            android:targetPackage="com.emergencylight.app" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_flashlight"
+        android:shortcutId="flashlight"
+        android:shortcutLongLabel="@string/shortcut_flashlight_long"
+        android:shortcutShortLabel="@string/shortcut_flashlight_short">
+        <intent
+            android:action="com.emergencylight.app.FLASHLIGHT"
+            android:targetClass="com.emergencylight.app.MainActivity"
+            android:targetPackage="com.emergencylight.app" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_flashing"
+        android:shortcutId="flashing"
+        android:shortcutLongLabel="@string/shortcut_flashing_long"
+        android:shortcutShortLabel="@string/shortcut_flashing_short">
+        <intent
+            android:action="com.emergencylight.app.FLASHING"
+            android:targetClass="com.emergencylight.app.MainActivity"
+            android:targetPackage="com.emergencylight.app" />
+    </shortcut>
+</shortcuts>

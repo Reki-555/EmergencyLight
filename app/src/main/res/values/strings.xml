@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main screen -->
+    <string name="app_name">Emergency Light</string>
+    <string name="status_torch_on">🔦 TORCH ON</string>
+    <string name="status_sos_on">🚨 SOS ON</string>
+
+    <!-- SOS -->
+    <string name="sos">SOS</string>
+    <string name="sos_tap_hint">Tap to sound alarm</string>
+    <string name="stop_alarm">STOP ALARM</string>
+    <string name="sos_hold_hint">Hold 2 s to stop</string>
+    <string name="sos_volume">SOS volume</string>
+
+    <!-- Flashlight card -->
+    <string name="card_flashlight">Flashlight</string>
+    <string name="card_flashlight_subtitle">Lantern of the Night Road</string>
+    <string name="flashlight">Flashlight</string>
+    <string name="level">Level</string>
+    <string name="levels_not_supported">Brightness levels aren\'t supported on this phone.</string>
+    <string name="no_flashlight">This phone has no flashlight.</string>
+    <string name="flashlight_signaling">Flashlight is signaling SOS</string>
+
+    <!-- Screen light card -->
+    <string name="card_screen_light">Screen Light</string>
+    <string name="card_screen_light_subtitle">Glow of the Wayfarer</string>
+    <string name="steady_light">Steady light</string>
+    <string name="flashing_light">Flashing light</string>
+    <string name="color">Color</string>
+    <string name="color_a">Color A</string>
+    <string name="color_b">Color B</string>
+    <string name="interval">Interval</string>
+    <string name="screen_brightness">Screen brightness</string>
+    <string name="pick_two_colors">Pick two different colors to see flashing.</string>
+
+    <!-- Summary lines -->
+    <string name="summary_steady">Color: %1$s %2$s</string>
+    <string name="summary_flashing">%1$s ↔ %2$s · %3$s %4$s</string>
+    <string name="arrow_collapsed">▾</string>
+    <string name="arrow_expanded">▴</string>
+
+    <!-- Value formats -->
+    <string name="value_level">%1$d / 10</string>
+    <string name="value_interval">%1$s s</string>
+    <string name="value_percent">%1$d%%</string>
+    <string name="unit_level">LEVEL</string>
+    <string name="unit_interval">INTERVAL</string>
+    <string name="unit_brightness">BRIGHTNESS</string>
+
+    <!-- Color names -->
+    <string name="color_white">White</string>
+    <string name="color_amber">Amber</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_red">Red</string>
+    <string name="color_green">Green</string>
+    <string name="color_cyan">Cyan</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_magenta">Magenta</string>
+
+    <!-- Light mode -->
+    <string name="lm_exit">Exit</string>
+    <string name="lm_torch_on">Torch On</string>
+    <string name="lm_torch_off">Torch Off</string>
+    <string name="lm_lock">Lock</string>
+    <string name="lm_sos">SOS</string>
+    <string name="lm_stop">STOP</string>
+    <string name="locked_hint">Locked — hold 🔒 for 2 s</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="keep_screen_on">Keep screen on</string>
+    <string name="keep_screen_on_desc">Stops the screen from turning off while the app is open.</string>
+    <string name="theme">Theme</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="style">Style</string>
+    <string name="style_minimal">Minimal</string>
+    <string name="style_dashboard">Night Dashboard</string>
+    <string name="style_instrument">Instrument Panel</string>
+    <string name="style_parchment">RPG Parchment</string>
+    <string name="style_sticker">Sticker Album</string>
+    <string name="hold_stop">Hold STOP for 2 seconds</string>
+    <string name="hold_stop_desc">Stops someone from silencing the alarm with one tap.</string>
+    <string name="notifications_off">Notifications are off</string>
+    <string name="allow">Allow</string>
+    <string name="background_running">Background running</string>
+    <string name="background_running_desc">If the flashlight or SOS stops when the screen is off, allow this app to run in the background.</string>
+    <string name="open_settings">Open settings</string>
+    <string name="version_label">Emergency Light 1.0</string>
+
+    <!-- Snackbar -->
+    <string name="snack_system_off">Flashlight turned off by the system.</string>
+    <string name="snack_busy">Flashlight is busy. Close the camera app and try again.</string>
+    <string name="snack_hold">Hold for 2 seconds to stop</string>
+    <string name="snack_dnd">Do Not Disturb may block the alarm. Check your Do Not Disturb settings.</string>
+
+    <!-- Notification -->
+    <string name="notif_flashlight_on">Flashlight is on</string>
+    <string name="notif_sos">SOS alarm is sounding</string>
+    <string name="notif_turn_off_flashlight">Turn off flashlight</string>
+    <string name="notif_stop_alarm">STOP ALARM</string>
+    <string name="channel_name">Light &amp; alarm status</string>
+
+    <!-- Shortcuts -->
+    <string name="shortcut_sos_short">SOS</string>
+    <string name="shortcut_sos_long">Sound SOS alarm</string>
+    <string name="shortcut_flashlight_short">Flashlight</string>
+    <string name="shortcut_flashlight_long">Turn on flashlight</string>
+    <string name="shortcut_flashing_short">Flashing light</string>
+    <string name="shortcut_flashing_long">Start flashing screen</string>
+
+    <!-- TalkBack -->
+    <string name="cd_sound_sos">Sound SOS alarm</string>
+    <string name="cd_stop_alarm">Stop alarm</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_dec_level">Decrease level</string>
+    <string name="cd_inc_level">Increase level</string>
+    <string name="cd_dec_interval">Decrease interval</string>
+    <string name="cd_inc_interval">Increase interval</string>
+    <string name="cd_dec_brightness">Decrease brightness</string>
+    <string name="cd_inc_brightness">Increase brightness</string>
+    <string name="cd_dec_sos_volume">Decrease SOS volume</string>
+    <string name="cd_inc_sos_volume">Increase SOS volume</string>
+    <string name="cd_hold_unlock">Hold to unlock</string>
+    <string name="cd_sos_volume_value">SOS volume %1$d percent</string>
+    <string name="cd_level_value">Level %1$d of 10</string>
+    <string name="cd_interval_value">Interval %1$s seconds</string>
+    <string name="cd_brightness_value">Screen brightness %1$d percent</string>
+    <string name="cd_color_selected">%1$s, selected</string>
+    <string name="cd_color_not_selected">%1$s, not selected</string>
+</resources>
